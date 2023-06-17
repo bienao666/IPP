@@ -1,8 +1,9 @@
+<div align="center">
 # IPPrefered IP优选
 
 ## 简介
 IPPrefered是基于java开发的一个优选CDN的工具，用于测试一些CDN的延迟和下载速度，内置8000+ip，支持手动上传ip文件，优选ip后自动DDNS到CloudFlare，自动设置负载均衡。
-
+</div>
 ## 功能
 * 定时测试ip指定端口的延迟和下载速度
 * 定时测试CloudFlare域名解析ip，无效自动更换
@@ -91,3 +92,7 @@ threadCount: 50 #测试线程数，不填默认50
 enablePushNormal: false #填 true 域名定时测试都会推送，填 false 不推送，5分钟一次，建议关闭
 enablePushInvalid: true #填 true 域名测试失败才会推送，填 false 不推送
 ```
+## 接口使用
+
+### 上传txt
+txt内容格式一行一个ip，调用方式我用Apifox做示例

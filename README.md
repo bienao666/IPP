@@ -14,7 +14,7 @@ IPPrefered是基于java开发的一个优选CDN的工具，用于测试一些CDN
 ###  docker (推荐)
 ```
 # 拉取配置文件并修改配置
-cd /root && mkdir ipp && cd ipp && mkdir config && wget 
+cd /root && mkdir ipp && cd ipp && mkdir config && wget https://github.com/bienao666/IPP/blob/main/application.yml
 ```
 ```
 cd /root

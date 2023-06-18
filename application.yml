@@ -8,7 +8,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:sqlite:D:/db.sqlite #linux jdbc:sqlite:/app/db.sqlite  windows：jdbc:sqlite:D:/db.sqlite
+    url: jdbc:sqlite:D:/db.sqlite #linux jdbc:sqlite:/app/db/db.sqlite  windows：jdbc:sqlite:D:/db.sqlite
     driver-class-name: org.sqlite.JDBC
     initialSize: 5
     minIdle: 5
@@ -26,7 +26,7 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
   sql:
     init:
-      mode: never #第一次安装设置为always，后面都设置为never
+      mode: never #第一次启动设置为always，后面都设置为never
       continue-on-error: true
       data-locations: classpath:db/init.sql
       schema-locations: classpath:db/create.sql

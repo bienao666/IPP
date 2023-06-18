@@ -45,7 +45,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:sqlite:D:/db.sqlite #linux jdbc:sqlite:/app/db.sqlite  windows：jdbc:sqlite:D:/db.sqlite
+    url: jdbc:sqlite:D:/db.sqlite #linux jdbc:sqlite:/app/db/db.sqlite  windows：jdbc:sqlite:D:/db.sqlite
     driver-class-name: org.sqlite.JDBC
     initialSize: 5
     minIdle: 5
@@ -108,3 +108,5 @@ http://ip:端口/ipprefered/file/upload
 ```
 
 <img src="https://pic.sl.al/gdrive/pic/2023-06-17/648dd275aa7e5.png">
+
+## 展示

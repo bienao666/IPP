@@ -30,8 +30,9 @@ docker run -itd \
 	--name ipp \
 	-p 8899:8899 \
 	-v /root/ipp/config:/app/config \
-	-v /root/ipp/log:/app/log \
-	bienao666/ippreferred:latest
+	-v /root/ipp/log:/log \
+	-v /root/ipp/db:/opt \
+	ippreferred:latest
 ```
 
 ### exe程序

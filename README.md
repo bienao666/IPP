@@ -64,7 +64,7 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
   sql:
     init:
-      mode: always
+      mode: never #第一次启动设置为always，后面都设置为never
       continue-on-error: true
       data-locations: classpath:db/init.sql
       schema-locations: classpath:db/create.sql

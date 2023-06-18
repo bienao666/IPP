@@ -7,6 +7,7 @@ WORKDIR /app
 #表示将IPPreferred-0.0.1-SNAPSHOT.jar，也就是项目jar包，拷贝进镜像，并命名为IPPreferred.jar。如果不拷贝，镜像就没jar包可运行了。
 ADD IPPreferred-0.0.1-SNAPSHOT.jar /app/IPPreferred.jar
 RUN mkdir /app/db && chmod -R 777 /app/db
+RUN mkdir /app/config && chmod -R 777 /app/config
 #宿主机的jdk目录
 ENV JAVA_HOME /usr/local/jdk/
 ENV PATH $PATH:$JAVA_HOME/bin

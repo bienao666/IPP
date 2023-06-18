@@ -14,20 +14,19 @@ IPPrefered是基于java开发的一个优选CDN的工具，用于测试一些CDN
 ## 部署
 
 ###  docker (推荐)
+1.拉取配置文件
 ```
-# 拉取配置文件并修改配置
 cd /root && mkdir ipp && cd ipp && mkdir config && cd config && wget https://raw.githubusercontent.com/bienao666/IPP/main/application.yml
 ```
-```
-cd /root
-```
+2.修改配置文件
+3.安装
 ```
 docker run -itd \
 	--restart=always \
 	--name ipp \
 	-p 8899:8899 \
-	-v $PWD/ipp/config:/app/config \
-	-v $PWD/ipp/log:/app/log \
+	-v /root/ipp/config:/app/config \
+	-v /root/ipp/log:/app/log \
 	bienao666/ippreferred:latest
 ```
 
@@ -95,6 +94,12 @@ enablePushInvalid: true #填 true 域名测试失败才会推送，填 false 不
 ```
 ## 接口使用
 
+### ip优选
+浏览器输入下方路径回车，手动触发ip优选，默认定时每天三点跑一遍(第一次安装后跑一遍)
+```
+http://ip:端口/ipprefered/task/ipstest
+```
+
 ### 上传txt
 txt内容格式一行一个ip，调用方式我用Apifox做示例
 
@@ -102,4 +107,4 @@ txt内容格式一行一个ip，调用方式我用Apifox做示例
 http://ip:端口/ipprefered/file/upload
 ```
 
-<img width="100" src="https://pic.sl.al/gdrive/pic/2023-06-17/648dd275aa7e5.png">
+<img src="https://pic.sl.al/gdrive/pic/2023-06-17/648dd275aa7e5.png">

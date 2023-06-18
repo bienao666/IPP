@@ -143,7 +143,21 @@ http://ip:端口/ipprefered/file/upload
 
 #### 5.1.3 负载均衡删除(CDN无效同时数据库无可用ip)
 
-暂时没有演示图片
+<img src="https://pic.sl.al/gdrive/pic/2023-06-18/648f14cd8c450.png">
+
+### 5.2 消息推送
+
+### 5.2.1 失效自动更新
+
+<img width="50%" src="https://pic.sl.al/gdrive/pic/2023-06-18/648f1584001b5.jpg">
+
+### 5.2.2 负载均衡新增
+
+
+
+### 5.2.3 负载均衡删除(CDN无效同时数据库无可用ip)
+
+<img width="50%" src="https://pic.sl.al/gdrive/pic/2023-06-18/648f1581def97.jpg">
 
 ## 6.常见问题
 

@@ -32,7 +32,7 @@ docker run -itd \
 	-v /root/ipp/config:/app/config \
 	-v /root/ipp/log:/app/log \
 	-v /root/ipp/db:/app/db \
-	ippreferred:latest
+	bienao666/ippreferred
 ```
 
 ### exe程序

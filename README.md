@@ -11,6 +11,7 @@ IPPrefered是基于java开发的一个优选CDN的工具，用于测试一些CDN
 ## 1.功能
 * 定时测试ip指定端口的延迟和下载速度
 * 定时测试CloudFlare域名解析ip，无效自动更换
+* 支持多域名配置
 * 支持CloudFlare域名解析负载均衡
 * wxpushre消息推送
 

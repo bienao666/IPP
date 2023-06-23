@@ -99,16 +99,14 @@ logging:
   config: classpath:log.xml
 
 cf:
-  email:  #cloudflare账号
-  token:  #cloudflare令牌
-  zone:  #cloudflare三级域名(DNS记录)
+  email: xxx #cloudflare账号
+  token: xxx #cloudflare令牌
+  zone: xxx:80:false #cloudflare三级域名，格式：域名:ip:开启tls(true/false)，多个用|隔开
 
 wxpusher: #消息推送 https://wxpusher.zjiecode.com/admin/
-  token:  #wxpusher 令牌
-  uid:  #wxpusher推送用户id
+  token: xxx #wxpusher 令牌
+  uid: xxx #wxpusher推送用户id
 
-testPort: 2052 #测试端口,不填默认2052
-enableTLS: false #是否开启tls
 threadCount: 50 #测试线程数，不填默认50
 enablePushNormal: false #填 true 域名定时测试都会推送，填 false 不推送，5分钟一次，建议关闭
 enablePushInvalid: true #填 true 域名测试失败才会推送，填 false 不推送

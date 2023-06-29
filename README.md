@@ -31,11 +31,7 @@ cd /root && mkdir ipp && cd ipp && mkdir config && cd config && wget https://raw
 
  4.wxpusher消息推送配置
 
- 5.testPort：需要测试的端口
-
- 6.enableTLS：是否开启tls
-
- 7.其他配置可不改，默认就行
+ 5.其他配置可不改，默认就行
 
 
 2.1.3 安装
@@ -65,7 +61,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:sqlite:D:/db.sqlite #linux jdbc:sqlite:/app/db/db.sqlite  windows：jdbc:sqlite:D:/db.sqlite
+    url: jdbc:sqlite:/app/db/db.sqlite #linux jdbc:sqlite:/app/db/db.sqlite  windows：jdbc:sqlite:D:/db.sqlite
     driver-class-name: org.sqlite.JDBC
     initialSize: 5
     minIdle: 5
@@ -98,19 +94,22 @@ logging:
   config: classpath:log.xml
 
 cf:
-  email:  #cloudflare账号
-  token:  #cloudflare令牌
-  zone:  #cloudflare三级域名(DNS记录)
+  email: xxx #cloudflare账号
+  token: xxx #cloudflare令牌
+  zone: xxx #cdn1.xxx.xxx:2082:false，域名：端口：是否开启tls(true/false)，多个用|隔开
 
 wxpusher: #消息推送 https://wxpusher.zjiecode.com/admin/
-  token:  #wxpusher 令牌
-  uid:  #wxpusher推送用户id
+  token: xxx #wxpusher 令牌
+  uid: xxx #wxpusher推送用户id
 
-testPort: 2052 #测试端口,不填默认2052
-enableTLS: false #是否开启tls
 threadCount: 50 #测试线程数，不填默认50
 enablePushNormal: false #填 true 域名定时测试都会推送，填 false 不推送，5分钟一次，建议关闭
 enablePushInvalid: true #填 true 域名测试失败才会推送，填 false 不推送
+
+scheduled:
+  testZone: 0 0/5 * * * ? #域名定时测试，默认配置5分钟一次
+  ipstest: 0 0 12 ? * Mon #筛选可用CDN，默认配置每周一执行一次，无需执行太频繁
+  goodipstest: 0 0 3 * * ? #过滤不可用CDN，默认配置每天三点执行一次
 ```
 ## 4.接口使用
 

@@ -96,7 +96,7 @@ logging:
 cf:
   email: xxx #cloudflare账号
   token: xxx #cloudflare令牌
-  zone: xxx #cdn1.xxx.xxx:2082:false，域名：端口：是否开启tls(true/false)，多个用|隔开
+  zone: xxx:80:false|xxx:80:false #cloudflare三级域名，格式：域名:ip:开启tls(true/false)，多个用|隔开
 
 wxpusher: #消息推送 https://wxpusher.zjiecode.com/admin/
   token: xxx #wxpusher 令牌
@@ -108,8 +108,7 @@ enablePushInvalid: true #填 true 域名测试失败才会推送，填 false 不
 
 scheduled:
   testZone: 0 0/5 * * * ? #域名定时测试，默认配置5分钟一次
-  ipstest: 0 0 12 ? * Mon #筛选可用CDN，默认配置每周一执行一次，无需执行太频繁
-  goodipstest: 0 0 3 * * ? #过滤不可用CDN，默认配置每天三点执行一次
+  ipstest: 0 0 12 ? * Mon #筛选可用CDN，默认配置每周一执行一次，如果ip少频率就高点，ip多频率就少点
 ```
 ## 4.接口使用
 

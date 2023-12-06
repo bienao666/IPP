@@ -1,0 +1,1 @@
+cd /root && mkdir ipp && cd ipp && mkdir db && cd db && wget https://raw.githubusercontent.com/bienao666/IPP/main/install/data.db && docker run --name ipp -d --restart always -e TZ=Asia/Shanghai -p 4539:4539 -v /root/ippreferred/log:/home/log/ -v /root/ippreferred/db:/home/db/ ippreferred:latest

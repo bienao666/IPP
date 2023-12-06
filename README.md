@@ -16,7 +16,7 @@ IPPreferedV2.0是基于java开发的一个优选CDN的工具，用于测试一�
 
 ## 2.部署
 ```
-wget https://raw.githubusercontent.com/bienao666/IPP/main/install.sh && chmod 777 install.sh && bash install.sh
+wget https://github.com/bienao666/IPP/blob/main/install/install.sh && chmod 777 install.sh && bash install.sh
 ```
 
 ## 3.展示

@@ -3,7 +3,7 @@
 # IPPrefered IP优选
 
 ## 简介
-IPPrefered是基于java开发的一个优选CDN的工具，用于测试一些CDN的延迟和下载速度，内置8000+ip，支持手动上传ip文件，优选ip后自动DDNS到CloudFlare，自动设置负载均衡。
+IPPreferedV2.0是基于java开发的一个优选CDN的工具，用于测试一些CDN的延迟和下载速度，内置40000+CDN，支持手动上传ip文件，优选ip后自动DDNS到CloudFlare，自动设置负载均衡。
 
 [Telegram 群组](https://t.me/bienao_airport)
 </div>
